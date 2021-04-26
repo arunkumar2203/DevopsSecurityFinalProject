@@ -76,6 +76,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				antMatchers("/addPlasmaDonotor").permitAll().
 				antMatchers("/updateUserRequest").permitAll().
 				antMatchers("/updatePlasma").permitAll().
+				antMatchers(
+                        HttpMethod.GET,
+                        "/",
+                        "/*.html",
+                        "/favicon.ico",
+                        "/glyphicons-halflings-regular.448c34a56d699c29117a.woff2",
+                        "/glyphicons-halflings-regular.89889688147bd7575d63.svg",
+                        "/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf",
+                        "/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot",
+                        "/glyphicons-halflings-regular.fa2772327f55d8198301.woff",
+                        "/fontawesome-webfontba72.b526f0637e912fae979b.svg",
+                        "/fontawesome-webfontba72.3293616ec0c605c7c2db.woff",
+                        "/fontawesome-webfontba72.dcb26c7239d850266941.ttf",
+                        "/*/.html",
+                        "/*/.css",
+                        "/*/.js",
+                        "/assets/css/**",
+                        "/assets/images/**",
+                        "/assets/font-awesome/fonts/**",
+                        "/assets/javascript/**",
+                        "/swagger-ui.html",
+                        "/swagger-resources/**",
+                        "/swagger-ui.html",
+                        "/v2/api-docs",
+                        "/webjars/**",
+                        "/swagger.json",
+                        "/main.1775c8476fc2fa82b754.js",
+                        "/polyfills.94daefd414b8355106ab.js",
+                        "/runtime.7b63b9fd40098a2e8207.js",
+                        "/styles.7b24d4c0c7d7e30102d9.css"
+                        
+                ).permitAll().
 				
 				
 				
