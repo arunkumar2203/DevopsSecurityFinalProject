@@ -1,10 +1,5 @@
 version: 0.2
-env:
-  secrets-manager:
-    LOGIN: sonarkeys:sonartoken
-    HOST: sonarkeys:HOST
-    Organization: sonarkeys:Organization
-    Project: sonarkeys:Project
+
 
 phases:
   pre_build:
@@ -22,9 +17,9 @@ phases:
       - echo Entered the build phase...
       - mvn clean package
       - mvn test     
-      - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization
+      - mvn sonar:sonar -Dsonar.login=66c1b79d37d788ab9c37486eab80e76eb5ccff23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=SampleTestProject26042021 -Dsonar.organization=arunkumar2203
       - sleep 5
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=SampleTestProject26042021 >result.json
       - cat result.json
       - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
   post_build:
