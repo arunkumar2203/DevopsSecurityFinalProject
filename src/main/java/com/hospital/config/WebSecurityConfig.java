@@ -75,6 +75,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				antMatchers("/addDonorRequest").permitAll().
 				antMatchers("/addPlasmaDonotor").permitAll().
 				antMatchers("/updateUserRequest").permitAll().
+				antMatchers("/updatePlasma").permitAll().
+				
 				
 				
 				// all other requests need to be authenticated

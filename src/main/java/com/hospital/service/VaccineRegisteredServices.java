@@ -33,6 +33,7 @@ public class VaccineRegisteredServices {
 		return "Deleted  Vaccine user "+id;
 	}
 	public List<VaccineRegistered> getVaccineRegisteredByName(String username) { 
+		System.out.println("##################"+username);
 		return vaccineRepository.findByName(username);
 
 	}

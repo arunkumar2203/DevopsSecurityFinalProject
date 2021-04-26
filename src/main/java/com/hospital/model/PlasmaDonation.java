@@ -37,5 +37,7 @@ public class PlasmaDonation {
 	private String age;
 	@Column
 	private String status;
+	@Column
+	private String email;
 
 }
