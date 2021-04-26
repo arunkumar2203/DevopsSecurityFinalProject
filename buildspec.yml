@@ -1,4 +1,10 @@
 version: 0.2
+env:
+  secrets-manager:
+    LOGIN: sonarkeys:sonartoken
+    HOST: sonarkeys:HOST
+    Organization: sonarkeys:Organization
+    Project: sonarkeys:Project
 
 phases:
   pre_build:
