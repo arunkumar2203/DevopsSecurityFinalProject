@@ -40,9 +40,14 @@ public class VaccineRegisteredServices {
 	
 	public VaccineRegistered updateUserRequest(VaccineRegistered existingUser) {
 		VaccineRegistered existingUserRequest=vaccineRepository.findById(existingUser.getId()).orElse(null);
+		
+		if(existingUserRequest!=null) {
+			existingUserRequest.setFirstDose(existingUser.getFirstDose());
+			existingUserRequest.setSecondDose(existingUser.getSecondDose());
+			
+		}
 
-		existingUserRequest.setFirstDose(existingUser.getFirstDose());
-		existingUserRequest.setSecondDose(existingUser.getSecondDose());
+	
 
 		return vaccineRepository.save(existingUserRequest);
 
