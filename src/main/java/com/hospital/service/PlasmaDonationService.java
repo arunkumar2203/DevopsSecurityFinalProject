@@ -27,9 +27,15 @@ public class PlasmaDonationService {
 	} 
 	
 	public PlasmaDonation updateUserRequest(PlasmaDonation existingUser) {
-		PlasmaDonation existingUserRequest=repository.findById(existingUser.getId()).orElse(null);
+		PlasmaDonation existingUserRequest=new PlasmaDonation();
+		try {
+		existingUserRequest=repository.findById(existingUser.getId()).orElse(null);
 
 		existingUserRequest.setStatus(existingUser.getStatus());
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 
 		return repository.save(existingUserRequest);
 
