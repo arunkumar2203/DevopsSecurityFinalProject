@@ -111,16 +111,16 @@ public class VaccineUserController {
 		// TODO Auto-generated method stub
 		SimpleMailMessage msg = new SimpleMailMessage();
 		msg.setTo(user.getEmail());
-		if(user.getFirstDose()=="1") {
+		if(user.getFirstDose().equalsIgnoreCase("1")) {
 			
 			msg.setSubject("Vaccine Notification !!!!!!!!!!!!");
 			msg.setText(" Dear member,\n Your first dose of vaccine has been approve.\n further more details please contact xyz@gmail.com. \n Thanks and Regards,\n Arun Dasari, \n phone no:899845297");
 		}
-		else if(user.getFirstDose()=="2") {
+		else if(user.getFirstDose().equalsIgnoreCase("2")) {
 			msg.setSubject("Vaccine Notification !!!!!!!!!!!!");
 			msg.setText(" Dear member,\n Your first dose of vaccine did not approve.\n further more  details please contact xyz@gmail.com. \n Thanks and Regards,\n Arun Dasari, \n phone no:899845297");
 		}
-		else if(user.getSecondDose()=="1") {
+		else if(user.getSecondDose().equalsIgnoreCase("1")) {
 			msg.setSubject("Vaccine Notification !!!!!!!!!!!!");
 			msg.setText(" Dear member,\n Your second dose of vaccine has been approve.\n further more details please contact xyz@gmail.com. \n Thanks and Regards,\n Arun Dasari, \n phone no:899845297");
 			
