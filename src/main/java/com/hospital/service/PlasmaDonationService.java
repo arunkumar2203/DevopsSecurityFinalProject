@@ -33,7 +33,7 @@ public class PlasmaDonationService {
 
 		existingUserRequest.setStatus(existingUser.getStatus());
 		}
-		catch(Exception e) {
+		catch(NullPointerException e) {
 			e.printStackTrace();
 		}
 
