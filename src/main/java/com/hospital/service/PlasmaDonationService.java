@@ -30,8 +30,12 @@ public class PlasmaDonationService {
 		PlasmaDonation existingUserRequest=new PlasmaDonation();
 		try {
 		existingUserRequest=repository.findById(existingUser.getId()).orElse(null);
+		if(existingUserRequest !=null) {
+			existingUserRequest.setStatus(existingUser.getStatus());
+			
+		}
 
-		existingUserRequest.setStatus(existingUser.getStatus());
+		
 		}
 		catch(NullPointerException e) {
 			e.printStackTrace();
