@@ -102,7 +102,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                         "/v2/api-docs",
                         "/webjars/**",
                         "/swagger.json",
-                        "/main.ea1ec17ca2f762f2b3dc.js",
+                        "/main.e9c60402263ff04c446b.js",
                         "/polyfills.94daefd414b8355106ab.js",
                         "/runtime.7b63b9fd40098a2e8207.js",
                         "/styles.7b24d4c0c7d7e30102d9.css"
