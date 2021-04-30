@@ -92,8 +92,8 @@ public class VaccineUserController {
 		// TODO Auto-generated method stub
 		SimpleMailMessage msg = new SimpleMailMessage();
 		msg.setTo(user.getEmail());
-		//if(user.getStatus().equals("1")) {
-		if(user.getStatus()=="1") {
+		if(user.getStatus().equals("1")) {
+		//if(user.getStatus()=="1") {
 			
 			msg.setSubject("Plasma Dontion !!!!!!!!!!!!");
 			msg.setText(" Dear member,\n Your Plasama Donation has been approve.\n further more details please contact xyz@gmail.com. \n Thanks and Regards,\n Arun Dasari, \n phone no:899845297");

@@ -76,6 +76,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				antMatchers("/addPlasmaDonotor").permitAll().
 				antMatchers("/updateUserRequest").permitAll().
 				antMatchers("/updatePlasma").permitAll().
+				
 				antMatchers(
                         HttpMethod.GET,
                         "/",
